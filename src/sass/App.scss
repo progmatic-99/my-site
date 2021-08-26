@@ -1,0 +1,247 @@
+@import "config";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background();
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 4rem;
+  }
+
+  &.sm-heading {
+    // width: 435px;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  // To remove the outer box which appears when link is clicked
+  outline: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 3rem;
+  // height: 100%;
+  // (Viewport height - footer height)
+  // To make footer sticky
+  min-height: calc(100vh - 50px);
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "bio text text text";
+  grid-template-columns: repeat(4, 1fr);
+
+  // .bio-image {
+  //   grid-area: bio-image;
+  //   margin: auto;
+  //   border-radius: 50%;
+  //   border: $secondary-color 3px solid;
+  //   width: 150px;
+  //   height: 150px;
+  // }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .bio-text {
+    grid-area: text;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Skills
+.skills {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "head head head head"
+    "job1 job2 job3 job4"
+    "job5 job6 job7 job8";
+  grid-template-columns: repeat(4, 1fr);
+
+  .head {
+    font-size: 1.5rem;
+    grid-area: head;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job-4 {
+    grid-area: job4;
+  }
+
+  .job-5 {
+    grid-area: job5;
+  }
+
+  .job-6 {
+    grid-area: job6;
+  }
+
+  .job-7 {
+    grid-area: job7;
+  }
+
+  .job-8 {
+    grid-area: job8;
+  }
+
+  .job {
+    //   background: lighten($color: $primary-color, $amount: 5);
+    //   padding: 0.5rem;
+    //   border-bottom: $secondary-color 5px solid;
+    img {
+      width: 40vh;
+      height: 40vh;
+    }
+  }
+}
+
+// Projects
+.projects {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    height: 40vh;
+    width: 100%;
+    border: 3px rgb(52, 223, 200) solid;
+
+    &:hover {
+      opacity: 0.3;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+    border: #fff 3px solid;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button styles
+.btn {
+  display: block;
+  padding: 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($color: $primary-color, $amount: 10);
+  color: set-text-color($primary-color);
+  height: 50px;
+}
+
+@import "mobile";
