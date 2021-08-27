@@ -99,7 +99,6 @@ main {
 
       &:hover {
         color: $secondary-color;
-        @include easeOut();
       }
     }
   }

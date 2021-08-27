@@ -22,7 +22,13 @@ export default class NavBar extends Component {
             <Nav className="mx-auto">
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#project">Projects</Nav.Link>
-              <Nav.Link href="#">Blog</Nav.Link>
+              <Nav.Link
+                href="https://progmatic99.hashnode.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
