@@ -1,5 +1,5 @@
 @import "config";
-@import "menu";
+@import "~bootstrap/scss/bootstrap";
 
 * {
   box-sizing: border-box;
@@ -9,24 +9,24 @@ body {
   @include background();
   background-color: $primary-color;
   color: set-text-color($primary-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   margin: 0;
   line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 // Headings
-h1,
-h2 {
+main {
   margin: 0;
   font-weight: 400;
 
-  &.lg-heading {
+  .lg-heading {
     font-size: 4rem;
   }
 
-  &.sm-heading {
-    // width: 435px;
+  .sm-heading {
+    font-size: 1.75rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
@@ -40,18 +40,52 @@ a {
   outline: 0;
 }
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+.text-secondary {
+  color: $secondary-color !important;
 }
 
-.text-secondary {
-  color: $secondary-color;
+.navbar {
+  &.nav-color {
+    background-color: #2b2b2b;
+  }
+
+  .container {
+    .navbar-brand {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .navbar-toggler {
+      box-shadow: none;
+      border-color: white;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    #responsive-navbar-nav {
+      .navbar-nav {
+        .nav-link {
+          font-size: 1.4rem;
+          color: #fff;
+          &:hover,
+          &.active {
+            color: $secondary-color !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 main {
   padding: 3rem;
+  text-align: center;
+  align-items: center;
   // height: 100%;
   // (Viewport height - footer height)
   // To make footer sticky
@@ -61,7 +95,7 @@ main {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 0.5rem;
 
       &:hover {
         color: $secondary-color;
@@ -70,11 +104,19 @@ main {
     }
   }
 
-  &#home {
+  &#home,
+  &#about,
+  &#project {
     overflow: hidden;
 
     h1 {
-      margin-top: 20vh;
+      margin-top: 10vh;
+    }
+  }
+
+  &#about {
+    .lg-heading {
+      color: $secondary-color;
     }
   }
 }
@@ -82,85 +124,38 @@ main {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "bio text text text";
-  grid-template-columns: repeat(4, 1fr);
-
-  // .bio-image {
-  //   grid-area: bio-image;
-  //   margin: auto;
-  //   border-radius: 50%;
-  //   border: $secondary-color 3px solid;
-  //   width: 150px;
-  //   height: 150px;
-  // }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-  }
+  place-items: center;
+  text-align: left;
+  font-size: 1.3rem;
 
   .bio-text {
-    grid-area: text;
-    p {
-      font-size: 1.5rem;
+    .intro,
+    .tech {
+      color: $secondary-color;
     }
-  }
-}
 
-// Skills
-.skills {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    "head head head head"
-    "job1 job2 job3 job4"
-    "job5 job6 job7 job8";
-  grid-template-columns: repeat(4, 1fr);
+    .open-head {
+      color: #24cee0;
+      &:hover {
+        color: $secondary-color;
+        text-decoration: underline;
+        text-decoration-color: $secondary-color;
+      }
+    }
 
-  .head {
-    font-size: 1.5rem;
-    grid-area: head;
-  }
+    ul {
+      li {
+        a {
+          font-weight: bold;
+          color: $secondary-color;
 
-  .job-1 {
-    grid-area: job1;
-  }
-
-  .job-2 {
-    grid-area: job2;
-  }
-
-  .job-3 {
-    grid-area: job3;
-  }
-
-  .job-4 {
-    grid-area: job4;
-  }
-
-  .job-5 {
-    grid-area: job5;
-  }
-
-  .job-6 {
-    grid-area: job6;
-  }
-
-  .job-7 {
-    grid-area: job7;
-  }
-
-  .job-8 {
-    grid-area: job8;
-  }
-
-  .job {
-    //   background: lighten($color: $primary-color, $amount: 5);
-    //   padding: 0.5rem;
-    //   border-bottom: $secondary-color 5px solid;
-    img {
-      width: 40vh;
-      height: 40vh;
+          &:hover {
+            color: #24cee0;
+            text-decoration: underline;
+            text-decoration-color: #24cee0;
+          }
+        }
+      }
     }
   }
 }
@@ -180,33 +175,6 @@ main {
       opacity: 0.3;
       border-color: $secondary-color;
       @include easeOut;
-    }
-  }
-}
-
-// Contact Page
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-
-  div {
-    font-size: 2rem;
-    padding: 1.5rem 2.5rem;
-    border: #fff 3px solid;
-    margin-bottom: 3rem;
-    @include easeOut;
-
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
-
-      span {
-        color: set-text-color($secondary-color);
-      }
     }
   }
 }
@@ -232,6 +200,7 @@ main {
 
 .btn-light {
   @extend .btn;
+  margin-top: 0.3rem;
   background: lighten($primary-color, 50);
   color: #333;
 }
@@ -240,8 +209,12 @@ main {
   text-align: center;
   padding: 1rem;
   background: darken($color: $primary-color, $amount: 10);
-  color: set-text-color($primary-color);
   height: 50px;
+
+  .name {
+    color: $secondary-color;
+    font-weight: bolder;
+  }
 }
 
 @import "mobile";

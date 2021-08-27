@@ -15,80 +15,20 @@
 // Tablets and Small laptops
 @include mediaMd {
   main {
-    text-align: center;
-    align-items: center;
-
-    h1.lg-heading {
-      font-size: 3rem;
+    .lg-heading {
+      font-size: 3rem !important;
       line-height: 1;
       margin-bottom: 1rem;
     }
 
-    h2.sm-heading {
-      font-size: 1rem;
+    .sm-heading {
+      font-size: 1rem !important;
       // width: 310px;
     }
   }
 
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu {
-    .nav-link {
-      font-size: 20px;
-    }
-  }
-
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-
-    .portrait {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
   .about-info {
-    grid-template-areas:
-      "bio"
-      "text";
-    grid-template-columns: 1fr;
-
-    .bio-text {
-      p {
-        font-size: 1.3rem;
-      }
-    }
-  }
-
-  .skills {
-    grid-template-areas:
-      "head head"
-      "job1 job2"
-      "job3 job4"
-      "job5 job6"
-      "job7 job8";
-    grid-template-columns: repeat(2, 1fr);
-    .job {
-      img {
-        height: 16vh;
-        width: 16vh;
-      }
-    }
+    font-size: 1rem;
   }
 
   .projects {
@@ -98,8 +38,19 @@
 
 // Smartphones
 @include mediaSm {
-  main#home h1 {
-    margin-top: 8vh;
+  main {
+    &#home,
+    &#about {
+      h1 {
+        margin-top: 8vh;
+      }
+    }
+  }
+
+  .about-info {
+    place-items: center;
+    text-align: left;
+    font-size: 1rem;
   }
 
   .projects {

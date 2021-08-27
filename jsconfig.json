@@ -1,14 +1,3 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "es6",
-    "paths": {
-      "@styles/*": [
-        "/src/sass/*"
-      ],
-      "@components/*": [
-        "/src/components/*"
-      ]
-    }
-  }
+  "exclude": ["public"]
 }

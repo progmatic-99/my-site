@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/fontawesome-free-solid";
 import "@fortawesome/free-brands-svg-icons";
-import "@styles/App.scss";
+import "../sass/App.scss";
 
 export class Home extends Component {
   render() {
@@ -11,7 +10,7 @@ export class Home extends Component {
         <h1 className="lg-heading">
           Shubham <span className="text-secondary">Upreti</span>
         </h1>
-        <h2 className="sm-heading">Developer | Engineer | Freelancer</h2>
+        <h3 className="sm-heading">Developer | Engineer | Freelancer</h3>
         <div className="icons">
           <a
             href="https://twitter.com/progmatic99"
@@ -33,6 +32,13 @@ export class Home extends Component {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+          </a>
+          <a
+            href="mailto:shubham.upreti@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={["fab", "google"]} size="2x" />
           </a>
         </div>
       </main>
