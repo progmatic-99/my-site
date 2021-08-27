@@ -15,11 +15,14 @@ export default class Projects extends Component {
             <a href="#!">
               <img src={portfolio} alt="portfolio-website" />
             </a>
-            <a href="https://progmatic-99.github.io" className="btn-light">
+            <a
+              href="https://progmatic-99.github.io/my-site/"
+              className="btn-light"
+            >
               <FontAwesomeIcon icon={["fas", "eye"]} /> Portfolio Website
             </a>
             <a
-              href="https://github.com/progmatic-99/progmatic-99.github.io"
+              href="https://github.com/progmatic-99/my-site"
               className="btn-dark"
               target="_blank"
               rel="noopener noreferrer"

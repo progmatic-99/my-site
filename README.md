@@ -1,5 +1,4 @@
 ### Features:-
 
-- [ ] Info about projects
-- [ ] skills
-- [ ] contact info
+- [x] Info about projects
+- [x] skills
