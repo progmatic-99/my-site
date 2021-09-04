@@ -23,7 +23,7 @@ export default class NavBar extends Component {
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#project">Projects</Nav.Link>
               <Nav.Link
-                href="https://progmatic99.hashnode.dev/"
+                href="https://blog.progmatic99.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
               >
