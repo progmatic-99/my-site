@@ -2,7 +2,7 @@
   "name": "progmatic-99.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://progmatic-99.github.io/my-site",
+  "homepage": "https://progmatic-99.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
