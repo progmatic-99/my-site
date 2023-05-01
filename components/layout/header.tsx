@@ -2,6 +2,7 @@ import { Button, Heading, HStack, IconButton, useColorMode } from "@chakra-ui/re
 import { IoMoon, IoSunny } from "react-icons/io5"
 import NextLink from "next/link"
 import { Link } from "@chakra-ui/react"
+import { BLOG } from '../../constants'
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -16,9 +17,9 @@ const Header = () => {
       </NextLink>
       <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
         <NextLink href="/" passHref>
-          <Button _hover={{ textDecoration: "none" }} as={Link} size="md" variant="ghost">Talks</Button>
+          <Button as={Link} _hover={{ textDecoration: "none" }} size="md" variant="ghost">Talks</Button>
         </NextLink>
-        <NextLink href="/" passHref>
+        <NextLink href={BLOG} passHref>
           <Button as={Link} _hover={{ textDecoration: "none" }} size="md" variant="ghost">Blog</Button>
         </NextLink>
         <IconButton aria-label="toggle theme" icon={colorMode === "dark" ? <IoMoon /> : <IoSunny />} variant="ghost" onClick={toggleColorMode} />

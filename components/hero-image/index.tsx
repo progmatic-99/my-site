@@ -6,11 +6,11 @@ const HeroImage = () => {
     //   <Image src="/my-site-gif.gif" alt="A gif of progmatic99" rounded="full" />
     // </AspectRatio>
     <Flex position='relative' justify='center' pb={4}>
-      <AspectRatio as='figure' flexShrink={0} w={56} h={56} ratio={1}>
+      <AspectRatio as='figure' flexShrink={0} w={56} h={56}>
         <Box overflow='hidden' rounded='full'>
           <Image
             alt='A photo of progmatic99'
-            src='/my-site-gif.gif'
+            src='/new-gif.gif'
             objectFit='contain'
           />
         </Box>

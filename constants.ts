@@ -1,4 +1,5 @@
 export const TWITTER = "https://twitter.com/progmatic99"
 export const YT = "https://www.youtube.com/@unemployedtechbros5620"
 export const GH = "https://github.com/progmatic-99"
-export const LKDN = ""
+export const LKDN = "https://linkedin.com/in/progmatic99"
+export const BLOG = "https://blog.progmatic99.xyz"

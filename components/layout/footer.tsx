@@ -3,6 +3,7 @@ import NextLink from "next/link"
 import { useRouter } from "next/router"
 
 import {
+  BLOG,
   TWITTER,
   GH,
   LKDN,
@@ -14,31 +15,34 @@ const firstGroup = [{
   label: "Home"
 },
 {
-  href: "/blog",
+  href: BLOG,
   label: "Blog"
 }]
 
 const secondGroup = [
   {
-    "href": TWITTER,
-    "label": "Twitter"
+    href: TWITTER,
+    label: "Twitter"
   },
   {
-    "href": GH,
-    "label": "Github"
+    href: GH,
+    label: "Github"
   },
   {
-    "href": YT,
-    "label": "YouTube"
+    href: YT,
+    label: "YouTube"
   },
   {
-    "href": LKDN,
-    "label": "LinkedIn"
+    href: LKDN,
+    label: "LinkedIn"
   }
 ]
 
 const Footer = () => {
   const { pathname } = useRouter()
+  // Link.defaultProps = {
+  //   href: '',
+  // };
 
   return (
     <VStack pt={16} pb={8} spacing={8}>
@@ -48,7 +52,7 @@ const Footer = () => {
           {firstGroup.map(({ href, label }) => {
             return (
               <NextLink key={label} href={href} passHref>
-                <Link color={pathname === href ? "purple.500" : "gray.500"}>{label}</Link>
+                <Link target="_blank" color={pathname === href ? "purple.500" : "gray.500"} isExternal>{label}</Link>
               </NextLink>
             )
           })}
@@ -57,7 +61,7 @@ const Footer = () => {
           {secondGroup.map(({ href, label }) => {
             return (
               <NextLink key={label} href={href} passHref>
-                <Link isExternal target="_blank" color={pathname === href ? "purple.500" : "gray.500"}>{label}</Link>
+                <Link target="_blank" color={pathname === href ? "purple.500" : "gray.500"} isExternal>{label}</Link>
               </NextLink>
             )
           })}
