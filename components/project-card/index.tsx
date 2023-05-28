@@ -88,17 +88,19 @@ const ProjectCard = ({
               color={"purple.600" || mode('black', 'white')}
               href={url}
               rightIcon={<Icon as={FiArrowUpRight} />}
+              isExternal
             >
               Live Site
             </Button>
 
             <Button
               variant='ghost'
-              key="Live Site"
+              key="Github repository"
               as={Link}
               color={"blue.300" || mode('black', 'white')}
               href={repoUrl}
               rightIcon={<Icon as={FiArrowUpRight} />}
+              isExternal
             >
               Github repo
             </Button>

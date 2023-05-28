@@ -13,7 +13,7 @@ type Props = {
 const BlogpostsSection = ({ posts }: Props) => {
   return (
     <VStack as="section" alignItems="flex-start" w="full" spacing={4}>
-      <Heading size="md">Recent blog posts...</Heading>
+      <Heading size="md">Recent blog posts.</Heading>
       <List w="full" spacing={{ base: 8, md: 2 }}>
         {posts.map((post) => (
           <ListItem key={post.slug}>

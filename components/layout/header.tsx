@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
       </NextLink>
       <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
-        <NextLink href="/" passHref>
+        <NextLink href="https://youtu.be/s8mXsJPi5y4" passHref>
           <Button as={Link} _hover={{ textDecoration: "none" }} size="md" variant="ghost">Talks</Button>
         </NextLink>
         <NextLink href={BLOG} passHref>

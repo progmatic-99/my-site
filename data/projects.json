@@ -4,14 +4,14 @@
       "title": "GoCRM",
       "description": "This is SaaS tool for travel agencies and SMBs to manage their customer data. You can't see the site and code because this is a paid tool.",
       "url": "progmatic99.xyz",
-      "repoUrl": "github.com/progmatic-99",
+      "repoUrl": "https://github.com/progmatic-99",
       "img": "/gocrm.png"
     },
     {
       "title": "Sona Electrosolutions",
-      "description": "This was my first freelance projects. Don't judge my skills based on this. Gracias",
+      "description": "This was my first freelance project. I created a site for a small business, showcasing their products and their business info. Don't judge my skills based on this. Gracias",
       "url": "https://sonaelectrosolutions.in/",
-      "repoUrl": "github.com/progmatic-99",
+      "repoUrl": "https://github.com/progmatic-99",
       "img": "/sona.png"
     }
   ]
