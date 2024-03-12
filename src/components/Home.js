@@ -20,7 +20,7 @@ export class Home extends Component {
             <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
           </a>
           <a
-            href="https://www.linkedin.com/in/shubham-upreti/"
+            href="www.linkedin.com/in/progmatic99"
             target="_blank"
             rel="noopener noreferrer"
           >
